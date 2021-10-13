@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15sp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter Passcode: "
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Enter Passcode"
+        android:id="@+id/txt_psswrd"
+        android:inputType="numberPassword"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <Button
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/design_default_color_secondary_variant"
+            android:text="Cancel"
+            android:textSize="15dp"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:id="@+id/btn_cancel"/>
+
+        <Button
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/design_default_color_secondary_variant"
+            android:text="Ok"
+            android:textSize="15dp"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:id="@+id/btn_ok"/>
+    </LinearLayout>
+
+    
+
+</LinearLayout>
