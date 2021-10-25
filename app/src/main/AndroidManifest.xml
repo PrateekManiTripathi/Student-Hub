@@ -6,9 +6,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/log_hub"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/log_hub"
         android:supportsRtl="true"
         android:theme="@style/Theme.StudentHub">
         <activity android:name=".ForgotActivity"></activity>

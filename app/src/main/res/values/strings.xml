@@ -2,8 +2,11 @@
     <string name="app_name">StudentHub</string>
     <string name="facebook_app_id">891613431788209</string>
     <string name="fb_login_protocol_scheme">fb891613431788209</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="start">Start</string>
     <string name="close">Close</string>
+
+
+    <string name="about_college">R.D. Engineering College (RDEC) is an engineering college, located at Ghaziabad City in the Indian state of Uttar Pradesh. The college is affiliated with Dr. A.P.J. Abdul Kalam Technical University, Lucknow, in the state of Uttar Pradesh, India. The college provides technical as well as management courses in various streams. Its campus is 11 km (6.8 mi) away from Vaishali metro station, near the National Highway 58, connecting Ghaziabad to Meerut.</string>
 </resources>
