@@ -14,12 +14,13 @@
         android:gravity="center_horizontal"/>
 
     <EditText
+        android:id="@+id/txt_psswrd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:hint="Enter Passcode"
-        android:id="@+id/txt_psswrd"
-        android:inputType="numberPassword"/>
+        android:inputType="numberPassword"
+        android:minHeight="48dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -27,24 +28,26 @@
         android:padding="10dp">
 
         <Button
-            android:layout_width="250dp"
+            android:id="@+id/btn_cancel"
+            android:layout_width="225dp"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/design_default_color_secondary_variant"
+            android:backgroundTint="@color/com_facebook_blue"
             android:text="Cancel"
             android:textSize="15dp"
             android:textColor="@color/white"
-            android:layout_weight="1"
-            android:id="@+id/btn_cancel"/>
+            android:layout_weight="1"/>
+
 
         <Button
-            android:layout_width="250dp"
+            android:id="@+id/btn_ok"
+            android:layout_width="225dp"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/design_default_color_secondary_variant"
+            android:backgroundTint="@color/com_facebook_blue"
             android:text="Ok"
             android:textSize="15dp"
             android:textColor="@color/white"
-            android:layout_weight="1"
-            android:id="@+id/btn_ok"/>
+            android:layout_weight="1"/>
+
     </LinearLayout>
 
     

@@ -21,6 +21,7 @@ public class AdminLogin extends AppCompatActivity {
     EditText txt1,txt2;
     Button loginBtn;
     private FirebaseAuth firebaseAuth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +30,7 @@ public class AdminLogin extends AppCompatActivity {
         txt2=findViewById(R.id.et2);
         loginBtn=findViewById(R.id.btn1);
         firebaseAuth = FirebaseAuth.getInstance();
+
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

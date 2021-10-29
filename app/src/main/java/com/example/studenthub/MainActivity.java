@@ -57,12 +57,16 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (txt_psswrd.getText().toString().equals("12345")){
                     Toast.makeText(MainActivity.this, "Welcome to Login Page", Toast.LENGTH_SHORT).show();
-                }else{
+                    startActivity(new Intent(MainActivity.this,AdminLogin.class));
+                }else if (txt_psswrd.getText().toString().isEmpty()){
+                    Toast.makeText(MainActivity.this, "Enter Password", Toast.LENGTH_SHORT).show();
+                }
+                else{
                     Toast.makeText(MainActivity.this, "wrong password", Toast.LENGTH_SHORT).show();
                 }
                 alertDialog.dismiss();
 
-                startActivity(new Intent(MainActivity.this,AdminLogin.class));
+//
             }
         });
         alertDialog.show();
