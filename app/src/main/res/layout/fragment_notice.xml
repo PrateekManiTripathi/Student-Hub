@@ -1,15 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ddefff"
-    tools:context=".ui.notice.NoticeFragment">
+    android:background="@color/white"
+    tools:context=".ui.notice.NoticeFragment"
+    android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="112sp"
+                android:layout_gravity="top"
+                android:fontFamily="@font/alegreya_sc_bold"
+                android:gravity="center"
+                android:text="RD ENGINEERING COLLEGE"
+                android:textColor="@color/black"
+                android:textSize="30sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="82sp"
+                android:background="@color/black"
+                android:text="New_Events"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:fontFamily="@font/alegreya_sc_bold"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:fontFamily="@font/alegreya_sc_bold"
+                android:paddingLeft="10sp"
+                android:text=" ‣ Description"
+                android:textColor="@color/com_facebook_blue"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/alegreya_sc_bold"
+                android:text="Dhehbjdbssvejcbndchenbadhedmnsjbdehd fnbbhhebnmbhdnbbeebejbeejjb eejbebenmikjbwgwfwjfbfhjfbjhajihrjkerruberirjrkrjgk,fbbm,ndkvnlrjirjrijidfkiehfewhfnjnniofinfn"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300sp"
+                android:background="@drawable/event1" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300sp"
+                android:background="@drawable/event3"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300sp"
+                android:background="@drawable/event2"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
