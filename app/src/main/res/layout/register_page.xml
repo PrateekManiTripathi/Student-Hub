@@ -5,7 +5,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity"
-        android:background="@drawable/back12"
+        android:background="@drawable/bg1"
         android:orientation="vertical" >
 
 
@@ -86,15 +86,16 @@
             android:inputType="numberPassword"
             android:textColorHint="@color/white" />
     </LinearLayout>
-        <Button
-            android:id="@+id/btn_register"
-            android:layout_width="250sp"
-            android:layout_height="45sp"
-            android:background="@drawable/input_bg"
-            android:text="Register"
-            android:textSize="20sp"
-            android:layout_gravity="center"
-            android:layout_margin="5sp"/>
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="250sp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:layout_margin="5sp"
+        android:background="@drawable/input_bg"
+        android:text="Register"
+        android:textSize="20sp" />
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="148dp">

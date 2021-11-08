@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Student-Hub/app/src/main/res/drawable/btn_bg.xml" value="0.2786458333333333" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Student-Hub/app/src/main/res/layout/activity_home.xml" value="0.264" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Student-Hub/app/src/main/res/layout/activity_main.xml" value="0.2625" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Student-Hub/app/src/main/res/layout/dialog_box.xml" value="0.2625" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Student-Hub/app/src/main/res/layout/drawer_header.xml" value="0.2625" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Student-Hub/app/src/main/res/layout/faculty_item.xml" value="0.2625" />
@@ -13,6 +15,7 @@
         <entry key="..\:/Users/HP/AndroidStudioProjects/Student-Hub/app/src/main/res/layout/fragment_home.xml" value="0.4" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Student-Hub/app/src/main/res/layout/fragment_notice.xml" value="0.2625" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Student-Hub/app/src/main/res/layout/login_page.xml" value="0.2625" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Student-Hub/app/src/main/res/layout/register_page.xml" value="0.2625" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Student-Hub/app/src/main/res/menu/bottom_nav.xml" value="0.2625" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Student-Hub/app/src/main/res/menu/nav_drawer.xml" value="0.2625" />
       </map>

@@ -79,5 +79,7 @@ public class HomeFragment extends Fragment {
 
             sliderLayout.addSliderView(sliderView);
         }
+
+
     }
 }
