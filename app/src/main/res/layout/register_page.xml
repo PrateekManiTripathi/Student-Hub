@@ -95,6 +95,8 @@
         android:layout_margin="5sp"
         android:background="@drawable/input_bg"
         android:text="Register"
+        android:textColor="@color/black"
+
         android:textSize="20sp" />
         <RelativeLayout
             android:layout_width="match_parent"
