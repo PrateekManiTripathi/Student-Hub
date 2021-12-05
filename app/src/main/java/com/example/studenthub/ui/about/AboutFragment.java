@@ -31,6 +31,8 @@ public class AboutFragment extends Fragment {
         list = new ArrayList<>();
         list.add(new BranchModel(R.drawable.comp,"Computer Science", "Hello"));
         list.add(new BranchModel(R.drawable.mech,"Mechanical", "Hello"));
+        list.add(new BranchModel(R.drawable.civil,"Civil", "Hello"));
+//        list.add(new BranchModel(R.drawable.elec,"Electronic", "Hello"));
 
         adapter = new BranchAdapter(getContext(),list);
 

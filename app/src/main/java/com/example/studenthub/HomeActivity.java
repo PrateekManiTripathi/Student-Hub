@@ -16,6 +16,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -95,10 +96,12 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
 
     @Override
+
+
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.navigation_developer:
-                Toast.makeText(this, "Developer", Toast.LENGTH_SHORT).show();
+                setContentView(R.layout.develop_section);
                 break;
 
             case R.id.navigation_ebook:
@@ -109,7 +112,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 break;
             case R.id.navigation_share:
                 try {
-
                     Intent i = new Intent(Intent.ACTION_SEND);
                     i.setType("text/plain");
                     i.putExtra(Intent.EXTRA_SUBJECT,"Rd Engineering College");
