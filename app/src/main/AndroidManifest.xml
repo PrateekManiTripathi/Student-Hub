@@ -11,7 +11,10 @@
         android:roundIcon="@drawable/log_hub"
         android:supportsRtl="true"
         android:theme="@style/Theme.StudentHub">
-        <activity android:name=".ForgotActivity"></activity>
+        <activity
+            android:name=".ui.gallery.FullScreenActivity"
+            android:exported="false" />
+        <activity android:name=".ForgotActivity" />
         <activity android:name=".AdminLogin" />
         <activity android:name=".FbSignInActivity" />
         <activity android:name=".GoogleSignInActivty" />
