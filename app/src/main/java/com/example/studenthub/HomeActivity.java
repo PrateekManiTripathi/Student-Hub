@@ -143,21 +143,22 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public void onBackPressed() {
 
-        backPressed = System.currentTimeMillis();
+        //backPressed = System.currentTimeMillis();
 
         if (drawerLayout.isDrawerOpen(GravityCompat.START)){
             drawerLayout.closeDrawer(GravityCompat.START);
-        }else {
 
-            if (backPressed+3000 > System.currentTimeMillis()){
-                super.onBackPressed();
-                backToast.cancel();
-                return;
-            }else {
-                CharSequence text;
-                backToast = Toast.makeText(this, "Press back again to exit", Toast.LENGTH_SHORT);
-                backToast.show();
-            }
+//        }else {
+//
+//            if (backPressed+3000 > System.currentTimeMillis()){
+//
+//                backToast.cancel();
+//                return;
+//            }else {
+//                CharSequence text;
+//                backToast = Toast.makeText(this, "Press back again to exit", Toast.LENGTH_SHORT);
+//                backToast.show();
+//            }
 
         }
 
