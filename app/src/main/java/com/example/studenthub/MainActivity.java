@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (txt_psswrd.getText().toString().equals("12345")) {
-                    Toast.makeText(MainActivity.this, "Welcome to Login Page", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(MainActivity.this, "Welcome to Login Page", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(MainActivity.this, UploadpdfFile.class));
                 }else{
                     if (txt_psswrd.getText().toString().isEmpty()){

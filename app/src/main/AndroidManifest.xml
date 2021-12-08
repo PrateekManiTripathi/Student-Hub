@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.StudentHub">
         <activity
+            android:name=".ebook.EbookActivity"
+            android:exported="true" />
+        <activity
             android:name=".UploadpdfFile"
             android:exported="true" />
         <activity android:name=".ForgotActivity" />

@@ -19,6 +19,7 @@ import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.studenthub.ebook.EbookActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
@@ -105,7 +106,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 break;
 
             case R.id.navigation_ebook:
-                Toast.makeText(this, "Ebooks", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this, EbookActivity.class));
                 break;
             case R.id.navigation_website:
                 Toast.makeText(this, "Website", Toast.LENGTH_SHORT).show();
