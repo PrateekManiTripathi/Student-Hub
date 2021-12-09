@@ -22,6 +22,7 @@ import android.widget.Toast;
 import com.example.studenthub.ebook.EbookActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.Objects;
 
@@ -36,12 +37,15 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
     private long backPressed;
     private Toast backToast;
+    private FirebaseAuth auth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         getSupportActionBar().setTitle("Rd Engineering College");
+
+        auth = FirebaseAuth.getInstance();
 
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         navController = Navigation.findNavController(this,R.id.frame_layout);
@@ -60,6 +64,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         NavigationUI.setupWithNavController(bottomNavigationView,navController);
     }
+
+
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) { // this method is used to show the nav drawer.
@@ -87,18 +93,28 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                     Toast.makeText(this, "Unable to open\n"+ e.getMessage(), Toast.LENGTH_SHORT).show();
                 }
                 break;
-
+            case R.id.logout:
+                auth.signOut();
+                openLogin();
         }
-
-
         return super.onOptionsItemSelected(item);
     }
 
+    private void openLogin() {
+        startActivity(new Intent(HomeActivity.this,MainActivity.class));
+        finish();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if (auth.getCurrentUser() == null){
+            openLogin();
+        }
+    }
 
 
     @Override
-
-
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.navigation_developer:
@@ -138,7 +154,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.option_menu,menu);
-        return super.onCreateOptionsMenu(menu);
+        return true;
     }
 
     @Override

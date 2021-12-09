@@ -9,11 +9,15 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class SplashActivity extends Activity {
 
     Handler handler;
     ImageView splashimage;
     TextView splashtext;
+
+    private FirebaseAuth auth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +25,8 @@ public class SplashActivity extends Activity {
         setContentView(R.layout.splash_file);
         splashimage = findViewById(R.id.splashimage);
         splashtext = findViewById(R.id.splashtext);
+
+        auth = FirebaseAuth.getInstance();
 
         Animation an = AnimationUtils.loadAnimation(this, R.anim.side_slide);
         splashimage.startAnimation(an);
@@ -36,4 +42,25 @@ public class SplashActivity extends Activity {
             }
         }, 3000);
     }
+
+//    @Override
+//    protected void onStart() {
+//        super.onStart();
+//        if (auth.getCurrentUser() !=null){
+//            openHome();
+//        }
+//        else {
+//           openLogin();
+//        }
+//    }
+//
+//    private void openLogin() {
+//        startActivity(new Intent(SplashActivity.this,LoginActivity.class));
+//        finish();
+//    }
+//
+//    private void openHome() {
+//        startActivity(new Intent(SplashActivity.this,HomeActivity.class));
+//        finish();
+//    }
 }

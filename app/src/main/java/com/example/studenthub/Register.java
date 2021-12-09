@@ -93,4 +93,17 @@ public class Register extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if (firebaseAuth.getCurrentUser() != null){
+            openMain();
+        }
+    }
+
+    private void openMain() {
+        startActivity(new Intent(Register.this,HomeActivity.class));
+        finish();
+    }
 }
