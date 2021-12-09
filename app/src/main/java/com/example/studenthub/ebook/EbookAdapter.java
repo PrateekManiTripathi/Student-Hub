@@ -1,6 +1,9 @@
 package com.example.studenthub.ebook;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,7 +36,7 @@ public class EbookAdapter extends RecyclerView.Adapter<EbookAdapter.EbookViewHol
     }
 
     @Override
-    public void onBindViewHolder(@NonNull EbookViewHolder holder,  int  position) {
+    public void onBindViewHolder(@NonNull EbookViewHolder holder, @SuppressLint("RecyclerView") final int  position) {
 
         holder.ebook_name.setText(list.get(position).getPdfTitle());
 
@@ -41,14 +44,18 @@ public class EbookAdapter extends RecyclerView.Adapter<EbookAdapter.EbookViewHol
         holder.ebook_name.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context,holder.getAdapterPosition(), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(context,PdfViewerActivity.class);
+                intent.putExtra("pdfUrl",list.get(position).getPdfUrl());
+                context.startActivity(intent);
             }
         });
 
         holder.ebook_download.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context, "Download", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(list.get(position).getPdfUrl()));
+                context.startActivity(intent);
             }
         });
 
