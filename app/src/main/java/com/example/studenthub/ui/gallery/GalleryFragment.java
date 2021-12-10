@@ -20,17 +20,17 @@ public class GalleryFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View myFragmentView= inflater.inflate(R.layout.fragment_gallery, container, false);
-//        grid=(GridView)myFragmentView.findViewById(R.id.gridView);
-//        adapter=new GridAdapter(getContext());
-//        grid.setAdapter((adapter));
-//        grid.setOnClickListener(new AdapterView.OnItemClickListener(){
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                Intent intent=new Intent(getActivity(),FullScreenActivity.class);
-//                intent.putExtra("id",position);
-//                getActivity().getApplicationContext().startActivity(intent);
-//            }
-//        });
+        grid=(GridView)myFragmentView.findViewById(R.id.gridView);
+        adapter=new GridAdapter(getContext());
+        grid.setAdapter((adapter));
+        grid.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent=new Intent(getContext(),FullScreenActivity.class);
+                intent.putExtra("id",position);
+                startActivity(intent);
+            }
+        });
         return myFragmentView;
     }
 }
