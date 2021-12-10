@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
     tools:context=".ui.about.AboutFragment">
 
    <LinearLayout
@@ -24,7 +26,12 @@
            android:layout_marginTop="@dimen/text_margin"
            android:layout_marginHorizontal="@dimen/text_margin"
            android:textSize="@dimen/text_size01"
-           android:textColor="@color/black"/>
+           />
+
+       <View
+           android:layout_width="match_parent"
+           android:layout_height="1dp"
+           android:background="@color/browser_actions_bg_grey"/>
 
        <TextView
            android:layout_width="wrap_content"
@@ -37,6 +44,12 @@
            android:textSize="@dimen/title_size"
            android:textStyle="bold" />
 
+
+       <View
+           android:layout_width="match_parent"
+           android:layout_height="1dp"
+           android:background="@color/browser_actions_bg_grey"/>
+
        <androidx.viewpager.widget.ViewPager
            android:id="@+id/viewPager"
            android:layout_width="match_parent"
@@ -46,6 +59,12 @@
            android:foregroundGravity="center"
            android:overScrollMode="never"
            tools:ignore="SpeakableTextPresentCheck" />
+
+
+       <View
+           android:layout_width="match_parent"
+           android:layout_height="1dp"
+           android:background="@color/browser_actions_bg_grey"/>
 
        <LinearLayout
            android:layout_width="match_parent"
@@ -63,6 +82,12 @@
                android:fontFamily="@font/alegreya_sc_bold"
                android:textColor="@color/com_facebook_blue"/>
 
+
+           <View
+               android:layout_width="match_parent"
+               android:layout_height="1dp"
+               android:background="@color/browser_actions_bg_grey"/>
+
            <TextView
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
@@ -71,17 +96,19 @@
                android:layout_marginHorizontal="@dimen/text_margin"
                android:fontFamily="sans-serif-light"
                android:textSize="@dimen/text_size01"
-               android:textColor="@color/black"/>
+               />
 
            <TextView
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-               android:text="Duhai,Ghaziabad"
-               android:layout_marginTop="@dimen/text_margin"
                android:layout_marginHorizontal="@dimen/text_margin"
+               android:layout_marginTop="@dimen/text_margin"
                android:fontFamily="sans-serif-light"
-               android:textSize="@dimen/text_size01"
-               android:textColor="@color/black"/>
+               android:text="Duhai,Ghaziabad"
+               android:textSize="@dimen/text_size01" />
+
+
+
 
            <ImageView
                android:id="@+id/map"

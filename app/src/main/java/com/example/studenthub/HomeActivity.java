@@ -4,14 +4,17 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
@@ -21,6 +24,7 @@ import android.widget.Toast;
 
 import com.example.studenthub.ebook.EbookActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -39,6 +43,13 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     private Toast backToast;
     private FirebaseAuth auth;
 
+    private SharedPreferences preferences;
+    private SharedPreferences.Editor editor;
+    private int checkedItem;
+    private String selected;
+
+    private final String CHECKED_ITEM = "checked_item";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +57,22 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         getSupportActionBar().setTitle("Rd Engineering College");
 
         auth = FirebaseAuth.getInstance();
+
+        preferences = this.getSharedPreferences("theme", Context.MODE_PRIVATE);
+        editor = preferences.edit();
+
+
+        switch (getCheckedItem()){
+            case 0:
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
+                break;
+            case 1:
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                break;
+            case 2:
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                break;
+        }
 
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         navController = Navigation.findNavController(this,R.id.frame_layout);
@@ -124,9 +151,11 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             case R.id.navigation_ebook:
                 startActivity(new Intent(this, EbookActivity.class));
                 break;
-            case R.id.navigation_website:
-                Toast.makeText(this, "Website", Toast.LENGTH_SHORT).show();
+
+            case R.id.navigation_color:
+                showDialog();
                 break;
+
             case R.id.navigation_share:
                 try {
                     Intent i = new Intent(Intent.ACTION_SEND);
@@ -149,6 +178,58 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 break;
         }
         return true;
+    }
+
+    private void showDialog() {
+        String[] theme = this.getResources().getStringArray(R.array.theme);
+
+        MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(this);
+        builder.setTitle("Select Theme");
+        builder.setSingleChoiceItems(R.array.theme, getCheckedItem(), new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int i) {
+                selected = theme[i];
+                checkedItem = i;
+            }
+        });
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int i) {
+                if (selected == null){
+                    selected = theme[i];
+                    checkedItem = i;
+                }
+                switch (selected){
+                    case "System(Default)":
+                        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
+                        break;
+                    case "Dark":
+                        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                        break;
+                    case "Light":
+                        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                        break;
+                }
+                setCheckedItem(checkedItem);
+            }
+        }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+
+    private int getCheckedItem(){
+        return preferences.getInt(CHECKED_ITEM,0);
+    }
+
+    private void setCheckedItem(int i){
+        editor.putInt(CHECKED_ITEM,i);
+        editor.apply();
     }
 
     @Override

@@ -16,12 +16,14 @@
             android:exported="true" />
         <activity
             android:name=".ebook.EbookActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".UploadpdfFile"
             android:exported="true" />
         <activity android:name=".ForgotActivity" />
-        <activity android:name=".AdminLogin" />
+        <activity android:name=".AdminLogin"
+            android:parentActivityName=".MainActivity"/>
         <activity android:name=".FbSignInActivity" />
         <activity android:name=".GoogleSignInActivty" />
         <activity android:name=".HomeActivity">

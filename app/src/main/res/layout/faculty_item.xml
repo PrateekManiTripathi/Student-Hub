@@ -2,8 +2,7 @@
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="4dp"
-    android:background="@color/white">
+    android:layout_margin="4dp">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -47,7 +46,6 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/name_text"
                     android:text="Mr. Rakesh Sharma"
-                    android:textColor="@color/black"
                     android:textSize="18sp"/>
 
                 <TextView
@@ -55,7 +53,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/post_text"
                     android:text="Chairman , Rdec"
-                    android:textColor="@color/black"
+
                     android:textSize="18sp"/>
 
                 <TextView
@@ -63,7 +61,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/email"
                     android:text=""
-                    android:textColor="@color/black"
+
                     android:textSize="18sp"/>
 
             </LinearLayout>
@@ -109,21 +107,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Mr. Vakil"
-                    android:textColor="@color/black"
+
                     android:textSize="18sp"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Dean Academics"
-                    android:textColor="@color/black"
+
                     android:textSize="18sp"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text=""
-                    android:textColor="@color/black"
+
                     android:textSize="18sp"/>
 
             </LinearLayout>
@@ -170,21 +168,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Dr. Jaideep Kumar"
-                    android:textColor="@color/black"
+
                     android:textSize="18sp"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="HOD (Cse Dept.)"
-                    android:textColor="@color/black"
+
                     android:textSize="18sp"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text=""
-                    android:textColor="@color/black"
+
                     android:textSize="18sp"/>
 
             </LinearLayout>
@@ -230,21 +228,20 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Dr. Sanjay Paliwal"
-                    android:textColor="@color/black"
+
                     android:textSize="18sp"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="HOD (Mech Dept.)"
-                    android:textColor="@color/black"
+
                     android:textSize="18sp"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text=""
-                    android:textColor="@color/black"
                     android:textSize="18sp"/>
 
             </LinearLayout>
@@ -290,21 +287,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Dr. Vishal Upmanyu"
-                    android:textColor="@color/black"
+
                     android:textSize="18sp"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="HOD (Elec Dept.)"
-                    android:textColor="@color/black"
+
                     android:textSize="18sp"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text=""
-                    android:textColor="@color/black"
+
                     android:textSize="18sp"/>
 
             </LinearLayout>
@@ -350,21 +347,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Dr. Pankaj Kumar Singh"
-                    android:textColor="@color/black"
+
                     android:textSize="18sp"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="HOD (Civil Dept.)"
-                    android:textColor="@color/black"
+
                     android:textSize="18sp"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text=""
-                    android:textColor="@color/black"
+
                     android:textSize="18sp"/>
 
             </LinearLayout>

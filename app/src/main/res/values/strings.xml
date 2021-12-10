@@ -14,4 +14,11 @@
     and also provide latest news about college events.
     Thank you,
     Team StudentHub.</string>
+
+    <string-array name="theme">
+
+        <item>System(Default)</item>
+        <item>Dark</item>
+        <item>Light</item>
+    </string-array>
 </resources>

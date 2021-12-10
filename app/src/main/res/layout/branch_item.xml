@@ -2,11 +2,13 @@
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
+
     android:layout_height="wrap_content">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:padding="@dimen/text_margin"
         android:orientation="vertical">
 
         <LinearLayout
@@ -30,7 +32,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginLeft="@dimen/text_margin"
                 android:text="Branch"
-                android:textColor="@color/black"
+
                 android:textSize="@dimen/title_size"/>
         </LinearLayout>
 
@@ -43,7 +45,7 @@
             android:layout_marginTop="@dimen/text_margin"
             android:layout_marginHorizontal="@dimen/text_margin"
             android:textSize="@dimen/text_size01"
-            android:textColor="@color/black"/>
+            />
 
 
 

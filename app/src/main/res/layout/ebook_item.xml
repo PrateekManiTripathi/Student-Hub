@@ -26,7 +26,7 @@
         android:textSize="@dimen/text_size0"
         android:text=""
         android:layout_marginLeft="@dimen/text_margin"
-        android:textColor="@color/black"/>
+        />
 
     <ImageView
         android:id="@+id/ebook_download"

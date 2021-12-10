@@ -5,6 +5,7 @@
         android:title="Ebooks"
         android:icon="@drawable/ebook"/>
 
+
     <item android:id="@+id/navigation_website"
         android:title="Website"
         android:icon="@drawable/website"/>
@@ -20,4 +21,9 @@
     <item android:id="@+id/navigation_developer"
         android:title="Developers"
         android:icon="@drawable/coding"/>
+
+    <item android:id="@+id/navigation_color"
+        android:title="Color"
+        android:icon="@drawable/ic_color"/>
+
 </menu>

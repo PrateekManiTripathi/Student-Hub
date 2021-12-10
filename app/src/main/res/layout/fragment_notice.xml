@@ -19,7 +19,7 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="112sp"
+                android:layout_height="50dp"
                 android:layout_gravity="top"
                 android:fontFamily="@font/alegreya_sc_bold"
                 android:gravity="center"
@@ -29,7 +29,7 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="82sp"
+                android:layout_height="50dp"
                 android:background="@color/black"
                 android:text="New Events"
                 android:textColor="@color/white"
