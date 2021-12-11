@@ -56,6 +56,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_home);
         getSupportActionBar().setTitle("Rd Engineering College");
 
+
+
         auth = FirebaseAuth.getInstance();
 
         preferences = this.getSharedPreferences("theme", Context.MODE_PRIVATE);

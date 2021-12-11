@@ -2,10 +2,22 @@
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     app:cardElevation="3dp"
-
     android:layout_margin="5dp"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<!--    <EditText-->
+<!--        android:id="@+id/search_text"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="51dp"-->
+<!--        android:layout_marginLeft="4dp"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:layout_marginRight="4dp"-->
+<!--        android:background="@drawable/editext_back"-->
+<!--        android:drawableLeft="@drawable/ic_search"-->
+<!--        android:drawablePadding="6dp"-->
+<!--        android:hint="Search here"-->
+<!--        android:padding="8dp" />-->
 
     <LinearLayout
         android:layout_width="match_parent"
