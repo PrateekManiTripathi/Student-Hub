@@ -18,6 +18,8 @@
             android:name=".ebook.EbookActivity"
             android:exported="true"
             android:parentActivityName=".MainActivity"/>
+        <activity android:name=".ui.gallery.FullScreenActivity"
+            android:exported="true"/>
         <activity
             android:name=".UploadpdfFile"
             android:exported="true" />
