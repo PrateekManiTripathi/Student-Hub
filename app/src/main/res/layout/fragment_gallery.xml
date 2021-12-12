@@ -24,7 +24,8 @@
         android:numColumns="3"
         android:columnWidth="90dp"
         android:horizontalSpacing="10dp"
-        android:verticalSpacing="20dp"
+        android:verticalSpacing="10dp"
+        android:background="@color/black"
         android:gravity="center"
         android:stretchMode="columnWidth"/>
 
