@@ -11,8 +11,6 @@
     android:id="@+id/option_rate"
     android:title="Rate Us"/>
 
-
-
     <item
     android:id="@+id/logout"
     android:title="Logout"/>

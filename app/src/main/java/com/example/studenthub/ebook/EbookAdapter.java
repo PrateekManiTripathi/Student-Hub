@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -78,5 +79,7 @@ public class EbookAdapter extends RecyclerView.Adapter<EbookAdapter.EbookViewHol
             ebook_download = itemView.findViewById(R.id.ebook_download);
         }
     }
+
+
 
 }

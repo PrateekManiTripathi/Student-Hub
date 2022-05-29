@@ -11,9 +11,16 @@
     <string name="about_college">R.D. Engineering College (RDEC) is an engineering college, located at Ghaziabad City in the Indian state of Uttar Pradesh. The college is affiliated with Dr. A.P.J. Abdul Kalam Technical University, Lucknow, in the state of Uttar Pradesh, India. The college provides technical as well as management courses in various streams. Its campus is 11 km (6.8 mi) away from Vaishali metro station, near the National Highway 58, connecting Ghaziabad to Meerut.</string>
     <string name="developer">Team Student Hub</string>
     <string name="content">Hello, The purpose of this app is to provide the study material for the students to prepare well for the exams
-    and also provide latest news about college events.
+    and also provide latest news about technical and non-technical events.
     Thank you,
     Team StudentHub.</string>
+
+    <string name="event_text">The Final day of R.D Engineering College Annual Festival 2k19 power-packed performance by Punjabi Singer
+    Alfaaz, who reached at 7:30pm in a white luxury car. Maintaining his style quotient, the singer took the stage dressed in a black
+        blazer with black aviator and a gold chain. He started the performance with his popular song, Haye mera dil,
+        and went on to sing RDEC, haye mera dil. Soon after his performance, the students started
+        gathering around the stage to get a selfie with the singer.
+    </string>
 
     <string-array name="theme">
 

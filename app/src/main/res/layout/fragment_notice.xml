@@ -50,10 +50,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/alegreya_sc_bold"
-                android:text="Dhehbjdbssvejcbndchenbadhedmnsjbdehd
-                fnbbhhebnmbhdnbbeebejbeejjb eejbebenmikjbwgwfwjfb
-                fhjfbjhajihrjkerruberirjrkrjgk,fbbm,ndkvnlrjirjrijidfk
-                iehfewhfnjnniofinfn"
+                android:text="@string/event_text"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
 

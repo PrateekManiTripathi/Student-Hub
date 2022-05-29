@@ -1,5 +1,7 @@
 package com.example.studenthub;
 
+import static com.example.studenthub.Constants.topic;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,12 +19,16 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.studenthub.api.ApiUtilities;
+import com.example.studenthub.model.NotificationData;
+import com.example.studenthub.model.PushNotifications;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
@@ -30,10 +36,14 @@ import com.google.firebase.storage.UploadTask;
 import java.io.File;
 import java.util.HashMap;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class UploadpdfFile extends AppCompatActivity {
 
     private ImageView pdf_img;
-    private Button select_btn,upload_btn;
+    private Button select_btn,upload_btn,send_notify;
     private EditText select_title;
     private TextView file_name;
     private String pdfName,title;
@@ -53,11 +63,14 @@ public class UploadpdfFile extends AppCompatActivity {
         pdf_img = findViewById(R.id.pdf_img);
         select_btn = findViewById(R.id.select_btn);
         upload_btn = findViewById(R.id.upload_btn);
+        send_notify = findViewById(R.id.send_notify);
         select_title = findViewById(R.id.select_title);
         file_name = findViewById(R.id.file_name);
 
         databaseReference = FirebaseDatabase.getInstance().getReference();
         storageReference = FirebaseStorage.getInstance().getReference();
+
+        FirebaseMessaging.getInstance().subscribeToTopic(topic);
 
         pd = new ProgressDialog(this);
 
@@ -78,6 +91,36 @@ public class UploadpdfFile extends AppCompatActivity {
             }
         });
 
+        send_notify.setOnClickListener(v -> {
+            sendNotification();
+        });
+    }
+
+
+    private void sendNotification(){
+        String title_txt = select_title.getText().toString();
+        String msg_txt = select_title.getText().toString() + "uploded by Admin";
+
+        if (!title_txt.isEmpty()){
+            PushNotifications pushNotifications = new PushNotifications(new NotificationData(title_txt,msg_txt),topic);
+            sendOnNotification(pushNotifications);
+        }
+    }
+
+    private void sendOnNotification(PushNotifications pushNotifications) {
+        ApiUtilities.getClient().sendNotify(pushNotifications).enqueue(new Callback<PushNotifications>() {
+            @Override
+            public void onResponse(Call<PushNotifications> call, Response<PushNotifications> response) {
+                if (response.isSuccessful()){
+                    Toast.makeText(UploadpdfFile.this, "Success", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<PushNotifications> call, Throwable t) {
+                Toast.makeText(UploadpdfFile.this, t.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     private void uploadPdf() {
@@ -102,6 +145,7 @@ public class UploadpdfFile extends AppCompatActivity {
             }
         });
     }
+
 
     private void uploadData(String downloadUrl) {
         String uniquekey  = databaseReference.child("pdf").push().getKey();

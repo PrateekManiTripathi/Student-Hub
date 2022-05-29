@@ -17,6 +17,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
@@ -158,6 +159,10 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 showDialog();
                 break;
 
+            case R.id.navigation_add_pdf:
+                startActivity(new Intent(this, PhoneLogin.class));
+                break;
+
             case R.id.navigation_share:
                 try {
                     Intent i = new Intent(Intent.ACTION_SEND);
@@ -245,10 +250,11 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         //backPressed = System.currentTimeMillis();
 
-        if (drawerLayout.isDrawerOpen(GravityCompat.START)){
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START);
-
-//        }else {
+        }
+    }
+//        else {
 //
 //            if (backPressed+3000 > System.currentTimeMillis()){
 //
@@ -262,7 +268,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         }
 
-    }
+
 
     //@Override
 //    public void onBackPressed() {
@@ -282,4 +288,3 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 //            }
 //        }).show();
 //    }
-}

@@ -29,10 +29,17 @@ public class AboutFragment extends Fragment {
         View view =  inflater.inflate(R.layout.fragment_about, container, false);
 
         list = new ArrayList<>();
-        list.add(new BranchModel(R.drawable.comp,"Computer Science", "Hello"));
-        list.add(new BranchModel(R.drawable.mech,"Mechanical", "Hello"));
-        list.add(new BranchModel(R.drawable.civil,"Civil", "Hello"));
-//        list.add(new BranchModel(R.drawable.elec,"Electronic", "Hello"));
+        list.add(new BranchModel(R.drawable.comp,"Computer Science", "The Department of Computer Science & Engineering " +
+                "was established in 2006. It houses the state- of- the-art computer laboratories and has developed very good Library " +
+                "facilities for the students."));
+        list.add(new BranchModel(R.drawable.mech,"Mechanical Engineering", "The Department of Mechanical Engineering was " +
+                "established in 2006 with the aim to provide best knowledge and environment."));
+        list.add(new BranchModel(R.drawable.civil,"Civil Engineering", " Engineering has been an aspect of life since the " +
+                "beginnings of human existence. Civil engineering is a professional engineering that deals with the design, construction, " +
+                "and maintenance of the physical and naturally built environment"));
+        list.add(new BranchModel(R.drawable.socket,"Electronics Engineering", "The field of Electronic Engineering " +
+                "encompasses the knowledge of electronic component / device and circuits used in the appliances such as radio, " +
+                "television, recorders/players, microwave ovens etc."));
 
         adapter = new BranchAdapter(getContext(),list);
 

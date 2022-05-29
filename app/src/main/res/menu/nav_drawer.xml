@@ -5,10 +5,9 @@
         android:title="Ebooks"
         android:icon="@drawable/ebook"/>
 
-
-    <item android:id="@+id/navigation_website"
-        android:title="Website"
-        android:icon="@drawable/website"/>
+    <item android:id="@+id/navigation_add_pdf"
+        android:title="Add Pdf"
+        android:icon="@drawable/add_pdf"/>
 
     <item android:id="@+id/navigation_share"
         android:title="Share"

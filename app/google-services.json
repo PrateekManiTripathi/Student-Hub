@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "672824520445",
+    "firebase_url": "https://student-hub-19434-default-rtdb.firebaseio.com",
     "project_id": "student-hub-19434",
     "storage_bucket": "student-hub-19434.appspot.com"
   },
@@ -13,6 +14,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "672824520445-mpku8fuoqu6mnv2ej1r76o4k3rq4u84t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.studenthub",
+            "certificate_hash": "eef69fa3432241431c2aad826d92e96c8bd89d6f"
+          }
+        },
         {
           "client_id": "672824520445-19atk7i4elv9cddbq40lbun6er34hl30.apps.googleusercontent.com",
           "client_type": 3
